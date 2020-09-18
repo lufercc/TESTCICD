@@ -1,0 +1,25 @@
+{
+  "credentials" : {
+    "owner" : {
+      "username" : "luiscachi",
+      "password" : "Control123"
+    },
+    "empty_credential" : {
+      "username" : "",
+      "password" : ""
+    },
+    "invalid_pw" : {
+      "username" : "luiscachi",
+      "password" : "invalid"
+    },
+    "no_password" : {
+      "username" : "luiscachi",
+      "password" : ""
+    },
+    "no_email" : {
+      "username" : "",
+      "password" : "invalid"
+    }
+  },
+  "browser" : "chrome"
+}
