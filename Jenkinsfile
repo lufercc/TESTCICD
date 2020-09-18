@@ -1,9 +1,12 @@
 pipeline {
  agent any
+ tools {
+    gradle "GRADLE_LATEST"
+ }
  stages {
     stage("build") {
          steps {
-             echo "test init"
+             sh 'gradle --version'
          }
     }
      stage("test") {
