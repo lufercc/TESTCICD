@@ -1,17 +1,17 @@
 pipeline {
  agent any
+ tools {
+    gradle "gradle"
+ }
  stages {
     stage("build") {
-        tools {
-            gradle 'gradle'
-        }
          steps {
-            sh "gradle clean executeFeatures"
+             sh 'gradle --version'
          }
     }
      stage("test") {
          steps {
-             echo 'testtestset'
+             sh 'gradle clean executeFeatures'
          }
      }
      stage("deploy") {
