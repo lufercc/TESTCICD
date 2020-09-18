@@ -3,7 +3,7 @@ pipeline {
  stages {
     stage("build") {
         tools {
-            gradle 'gradle4'
+            gradle 'gradle'
         }
          steps {
             sh "gradle clean executeFeatures"
