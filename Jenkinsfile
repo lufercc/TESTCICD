@@ -1,17 +1,16 @@
 pipeline {
  agent any
- tools {
-    gradle "GRADLE_LATEST"
- }
  stages {
     stage("build") {
          steps {
-             sh 'gradle --version'
+            def gradleHome = tool 'gradle4'
+            echo "''${gradleHome}'"
+            sh "'${gradleHome}/bin/gradle' clean executeFeatures"
          }
     }
      stage("test") {
          steps {
-             sh 'gradle clean executeFeatures'
+             echo 'testtestset'
          }
      }
      stage("deploy") {
