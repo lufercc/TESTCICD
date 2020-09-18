@@ -2,10 +2,11 @@ pipeline {
  agent any
  stages {
     stage("build") {
+        tools {
+            gradle 'gradle4'
+        }
          steps {
-            def gradleHome = tool 'gradle4'
-            echo "''${gradleHome}'"
-            sh "'${gradleHome}/bin/gradle' clean executeFeatures"
+            sh "gradle clean executeFeatures"
          }
     }
      stage("test") {
